@@ -258,17 +258,17 @@ const app = {
         let newIndex
         do {
             newIndex = Math.floor(Math.random() * this.songs.length)
-        } while (app.arraySong.includes(newIndex))
+        } while (this.arraySong.includes(newIndex))
         this.currentIndex = newIndex
         this.inputArray()
         this.loadCurrentSong()
     },
     inputArray: function() {
-        if (app.arraySong.length < this.songs.length - 1) {
-            app.arraySong.push(this.currentIndex)
+        if (this.arraySong.length < this.songs.length - 1) {
+            this.arraySong.push(this.currentIndex)
         } else {
-            app.arraySong = []
-            app.arraySong.push(this.currentIndex)
+            this.arraySong = []
+            this.arraySong.push(this.currentIndex)
         }
     },
     // Tải config
