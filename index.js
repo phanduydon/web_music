@@ -21,7 +21,7 @@ const app = {
     isPlaying: false,
     isRandom: false,
     isRepeat: false,
-    ispullProgress: true,
+    ispullProgress: false,
     songs: [{
             name: "Nevada",
             singer: "Vicetone",
@@ -171,9 +171,9 @@ const app = {
             _this.ispullProgress = true
         }
         progress.onpointerup = function(e) {
-                _this.ispullProgress = false
                 const seekTime = e.target.value / 100 * audio.duration
                 audio.currentTime = seekTime
+                _this.ispullProgress = false
             }
             // xử lí quay CD
         const cdThumbAnimate = cdThumb.animate([
